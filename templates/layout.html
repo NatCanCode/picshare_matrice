@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="../static/images/logo.png">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">   -->
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="../static/css/display.css">
+    <link rel="stylesheet" href="../static/css/upload.css">
+
+    <title>Picshare</title>
+    <!-- layout.html is shared between all templates -->
+</head>
+
+<body> 
+	<!-- HEADER -->
+    <nav class="header">
+        <img class="logo flex" src="../static/icons/logo.png" alt="logo-blue-camera-icon">
+        <h1 class="title flex">PICSHARE</h1>
+         <div class="menulinks flex">
+            <a href="/"><img src="../static/icons/home.png"></a>
+            <a href="/profile"><img src="../static/icons/userlogin.png" alt="profile icon"></a>
+        </div>
+        <div class="plus flex">
+            <div class="uploadbutton flex">
+                <a href="/upload"><img src="../static/icons/plus.png" alt="logo-white-plus-icon"></a>
+            </div>
+        </div>  
+    </nav>
+    
+    <!-- MAIN -->
+    <div class="main">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="copyright flex">© Picshare, 2021. Challenge taken up by Denise, Nathalie, and Thomas.</p>
+        <div class="socialmedia flex">
+            <a href="https://www.linkedin.com/in/matrice/"><img class="linkedin" src="../static/icons/linkedin.png" alt="linkedin-icon"></a>
+            <a href="https://www.instagram.com/matrice.io/"><img class="instagram" src="../static/icons/instagram.png" alt="instagram-icon"></a>
+            <a href="https://twitter.com/Matrice_io/"><img class="twitter" src="../static/icons/twitter.png" alt="twitter-icon"></a>
+        </div>
+        <div class="plus flex">
+        <div class="plus flex">
+            <div class="uploadbutton flex">
+                <a href="/upload"><img src="../static/icons/plus.png" alt="logo-white-plus-icon"></a>
+            </div>
+        </div>    
+    </footer>
+</body>
+</html>

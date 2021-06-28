@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+    
+{% block content %}
+
+  
+<!-- UPLOAD SECTION -->
+<div class="main">
+    <section class="uploadsection">
+        <h3 class="subtitle ">We'd love to share your pictures!</h3>
+        <p class="returnmsg">{{return_message }}</p>
+    <!-- Form which will send a POST request to the current URL -->
+        <form method=post enctype="multipart/form-data">
+            <div class="border flex">
+                <input type=file name=file>
+            </div>
+            <div class="titleupload border flex">
+                <input type="text" name=title placeholder="Type your title here!">
+            </div>
+            <select multiple id="multiselect" class="border" name="multiselect">
+                {% for cat in all_cat %}
+                <option value = "{{ cat[0] }}" ><p>{{ cat[0] }}</p></option>
+                {% endfor %}
+            </select>
+            <div class="border flex">
+                <input type="text" name=new_cat  placeholder="Launch a new category!">
+            </div>
+            <div class="dateupload border flex">
+                <input type="datetime-local" name=post_date>
+            </div>
+            <div class="captionupload border flex">
+                <!-- <input class="" type="text" name="" id="" value="Reach your categories!"> -->
+                <input type="text" name=description placeholder="Any awesome caption to type?">
+            </div>
+            <div class="buttonshare flex">
+                <input type=submit value="Share">
+            </div> 
+        </form>
+    </section>
+</div>
+{% endblock %}

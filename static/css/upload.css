@@ -1,0 +1,72 @@
+.returnmsg{
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+/* > * = applies to all direct children */
+form > *{
+    color: #1282A2;
+    background-color: #FEFCFB;
+    border: none;
+    flex-direction: column;
+    margin: 2%;
+}
+.border{
+    border: solid 1px #1282A2;
+    border-radius: 3px;
+}
+.uploadsection{
+    min-width: 100vw;
+    min-height: 70vh;
+    padding: 10% 3% 10% 3%;
+    /* padding: top right bottom left*/
+}
+input, textarea, select{
+    color: grey;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #EFF5F6;
+    font-size: clamp(11px, 10vw, 16px);
+    line-height: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+select{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+textarea{
+    width: 100%;
+}
+.center{
+    justify-content: center;
+    align-items: space-around;
+}
+.names{
+    margin-bottom: 2%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#contactsection button{
+    margin-top: 4%;
+}
+.buttonshare input{
+    border-radius: 5px;
+    border: 1px solid #1282A2;
+    background-color: #1282A2;
+    padding: .4% 3% .4% 3%;
+    /* padding: top right bottom left*/
+    transition: background-color .5s;
+    font-family: 'Roboto', sans-serif;
+    color: #FEFCFB !important;
+    font-size: clamp(13px, 10vw, 20px !important);
+    line-height: 30px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+.buttonshare:hover input{
+    color: #1282A2 !important;
+    background-color: #FEFCFB;
+    border: 1px solid #1282A2;
+}

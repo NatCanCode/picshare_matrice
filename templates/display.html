@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    
+<!-- DISPLAY SECTION -->
+<div class="main">
+    <section class="displaysection">
+
+        <a href = "/detail/{{ id[0] }}"><img class="imgdisplay" src = "/{{ config['uploads'] }}/{{ id[1] }}"></a>
+        <!-- <img class="imgdisplay" src="../static/images/static_images_cat_zoom.jpg" alt=""> -->
+        
+        <button class="like">
+            <a href="">Like</a>
+        </button>
+        <button class="comment">
+            <a href="">Comment<form method=post enctype="multipart/form-data">
+                <input type="text" name=comment>
+                <!-- <input type=submit value=Upload>Upload -->
+            </form></a>   
+        </button>
+
+        <div class="displaytext">
+            <div class="dots flex">
+                <h3 class="displaytitle">{{ id[2] }}</h3>
+                <img class="titledots" src="../static/images/dots.png" alt="">
+            </div>
+            <p class="displaydate">{{ id[4] }}</p>
+            <p class="displaycaption">{{ id[3] }}</p>
+            {% for cat in categ %}
+            <a href="/categories/{{cat[0]}}"><h4 class="displaycategories">{{ cat[0] }}</h4></a>
+            {% endfor %}
+            <h3 class="displaycomments">Comments</h3>
+            {% for comment in com %}
+            <p>{{ comment[0] }}</p>
+            {% endfor %}
+        </div>
+
+        <div class="downloadbutton flex">
+            <img class="download flex" src="../static/icons/download.png" alt="logo-white-plus-icon"><a href="upload.html"></a>
+        </div>
+
+    </section>
+</div>
+{% endblock %}

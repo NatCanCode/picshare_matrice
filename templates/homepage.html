@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+<!-- MAIN -->
+{% block content %}
+
+    <div class="two-columns flex">
+        <div class="sidebar flex">
+            <div class="box">
+                <form name="search">
+                    <input type="text" class="input" name="txt" 
+                    onmouseout="document.search.txt.value = ''">
+                </form>
+                    <i class="fas fa-search"></i>
+            </div>
+            <div class="category-sidebar flex">
+                {% for nom in all_categories %}
+
+                
+                    <a href ="/categories/{{ nom }}"><button class="catbutton flex"><p>{{ nom }}</p></button></a>
+                
+
+                {% endfor %}
+            </div>
+        </div>
+        <!-- <div>
+            {% for picture in all_pictures|batch(1) %}
+                    {% for a, b in picture %}
+                    <div class="more_img">
+                        <a href = "/detail/{{ b }}"><img class="img gallery" src = "/{{ config['UPLOAD_FOLDER'] }}/{{ b }}" width=350px heigth=350px></a>
+                    </div>
+                   
+                    {% endfor %}
+            {% endfor %}
+        </div> -->
+
+        <div class="grid-container flex">
+        {% for picture in all_pictures %}
+       
+            <div class="grid-item gallery">
+                <a href = "/detail/{{ picture[0] }}"><img src ="/{{ config['UPLOAD_FOLDER'] }}/{{ picture[1] }}" width=270></a>
+            </div>
+            
+        {% endfor %} 
+        </div>
+    </div>
+    <!-- <div class="buttonmore flex">
+        <button>
+            <a href="">See more</a>
+        </button>
+    </div> -->
+
+{% endblock %}  
